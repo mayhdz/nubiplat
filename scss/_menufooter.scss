@@ -1,0 +1,124 @@
+/*--------- MENU ---------*/
+
+.logoNavbar {
+  max-height: 50px;
+}
+.items__navbar {
+  background-color: $negro;
+  width: $anchocompleto;
+  height: 6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 25px;
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+    a {
+      font-family: "raleway";
+      text-decoration: none;
+      color: $blanco;
+      font-size: 16px;
+      letter-spacing: 1px;
+      padding: 15px;
+      &:hover {
+        color: $rosa;
+        border-radius: 3px;
+        background-color: $negro;
+      }
+    }
+  }
+}
+
+/*--------- FOOTER ---------*/
+
+footer {
+  width: 100%;
+  background-color: $negro;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  ul {
+    display: inline-block;
+    list-style: none;
+    li {
+      a {
+        text-decoration: none;
+        color: $crema2;
+        display: inline-block;
+      }
+    }
+  }
+  p {
+    color: $crema2;
+    padding-left: 65px;
+  }
+}
+.footer-redes {
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    padding-right: 80px;
+    li {
+      padding: 25px;
+    }
+  }
+}
+
+.fa-instagram {
+  @include iconssocial;
+}
+
+.fa-facebook {
+  @include iconssocial;
+}
+
+.fa-youtube {
+  @include iconssocial;
+}
+
+.footer-logo {
+  width: 150px;
+  padding-left: 50px;
+}
+.footer-soporte {
+  ul {
+    li {
+      a {
+        color: $rosa;
+        font-family: "raleway";
+        padding: 10px;
+        font-size: 18px;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+$negro: #000;
+$grisoscuro: #353535;
+$grisclaro: #636363;
+$violeta: #6e5773;
+$rosa: #d45d79;
+$naranja: #ea9085;
+$crema: #e9e2d0;
+$crema2: #fcf8f0;
+$blanco: #fff;
+$altovh: 100vh;
+$anchocompleto: 100%;
+
+@mixin textbenef {
+  font-size: 18px;
+  font-family: "raleway";
+  color: $blanco;
+  line-height: 25px;
+}
+
+@mixin titulobenef {
+  color: $blanco;
+  font-size: 25px;
+  text-align: center;
+  font-family: "raleway";
+  letter-spacing: 3px;
+  padding-bottom: 20px;
+}
+
+@mixin textosplanes {
+  display: block;
+  text-align: center;
+  width: 300px;
+  h2 {
+    font-family: "raleway";
+    font-weight: 500;
+    color: $rosa;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 30px;
+    border-bottom: $grisclaro solid 1px;
+  }
+  h3 {
+    padding-bottom: 25px;
+    padding-top: 25px;
+    color: $violeta;
+    font-size: 38px;
+  }
+  p {
+    color: $grisoscuro;
+    font-size: 16px;
+    text-align: left;
+    padding: 0px 20px 10px 20px;
+  }
+}
+
+@mixin iconssocial {
+  color: #fff;
+  font-size: 36px;
+}
+
