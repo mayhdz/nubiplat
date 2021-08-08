@@ -22,7 +22,6 @@
     /*--------- INICIO  ---------*/
 
     .banner {
-      height: ($altovh)-10;
       background: -webkit-gradient(
         linear,
         left top,
@@ -475,19 +474,139 @@
       }
     }
 
-    /* RESPONSIVE */
+    /* ---------- RESPONSIVE ---------- */
 
     /* moviles pequeños */
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      .banner {
+        width: 560px;
+        height:45rem;
+        .contenedorTextMob {
+          padding-top: 80px;
+          .contenedorText {
+            width:450px;
+            padding-left: 35px;
+            h1 {
+              font-size: 3.5rem;
+              text-align: center;
+            }
+            p {
+              font-size: 1.3rem;
+            }
+          }
+          .contenedorMob {
+            img {
+              height: 18rem;
+              padding-top: 40px;
+            }
+          }
+        }
+      }
+
+      .contenedor__beneficios {
+        width: 120%;
+      }
+    
+    
+    
+    
     }
     /* moviles grandes */
     @media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
+      .banner {
+        width: 150%;
+        height:50rem;
+        padding:45px;
+        .contenedorTextMob {
+          width: 780px;
+          .contenedorText {
+            h1 {
+              font-size: 3rem;
+              text-align: center;
+            }
+            p {
+              font-size: 1.3rem;
+            }
+          }
+          .contenedorMob {
+            img {
+              height: 25rem;
+              padding-top: 40px;
+            }
+          }
+        }
+      }
+      .contenedor__beneficios {
+        width:130%;
+      }
+
+
+
+      
     }
     /* ipads y tablets */
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      .banner {
+        height:30rem;
+        padding:0px;
+        .contenedorTextMob {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          .contenedorText {
+            display: inline-block;
+            max-width: 620px;
+            padding-left: 80px;
+            h1 {
+              font-size: 3rem;
+            }
+            p {
+              font-size: 1rem;
+            }
+          }
+          .contenedorMob {
+            img {
+              height: 20rem;
+              float:right;
+            }
+          }
+        }
+      }
+
+      
     }
     /* pequeños monitores */
     @media only screen and (min-device-width: 1024px) and (max-device-width: 1670px) {
+      .banner {
+        height:35rem;
+        .contenedorTextMob {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          .contenedorText {
+            display: inline-block;
+            max-width: 700px;
+            h1 {
+              font-size: 3.8rem;
+            }
+            p {
+              font-size: 1.2rem;
+            }
+          }
+          .contenedorMob {
+            img {
+              height: 26rem;
+              float:right;
+            }
+          }
+        }
+      }
+    
+    
+    
+    
+    
+    
     }
   }
 }
