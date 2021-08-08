@@ -6,15 +6,15 @@
   padding: 0px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Cabin", "Raleway";
+  font-family: "Rubik", "Poppins";
   body {
     background-color: $grisoscuro;
     max-width: $anchocompleto;
     max-height: 80vh;
     h1 {
       text-align: center;
-      font-family: "Raleway";
-      font-weight: 600;
+      font-family: $titulos;
+      font-weight: 500;
       font-size: 45px;
       padding-top: 50px;
     }
@@ -45,47 +45,48 @@
       justify-content: center;
       -ms-flex-line-pack: center;
       align-content: center;
-    }
-    .contenedorTextMob {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -ms-flex-line-pack: center;
-      align-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      .contenedorText {
-        display: block;
-        max-width: 650px;
-        h1 {
-          color: $blanco;
-          margin: auto;
-          font-size: 70px;
-          text-align: left;
-          padding: 0px;
+
+      .contenedorTextMob {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        .contenedorText {
+          display: inline-block;
+          max-width: 620px;
+          padding-left: 80px;
+          h1 {
+            color: $blanco;
+            margin: auto;
+            font-size: 70px;
+            text-align: left;
+            padding: 0px;
+          }
+          p {
+            color: $blanco;
+            font-size: 20px;
+            font-family: $textos;
+            font-weight: 100;
+            padding-top: 30px;
+          }
         }
-        p {
-          color: $blanco;
-          font-size: 20px;
-          font-family: "raleway";
-          font-weight: 100;
-          word-spacing: 2px;
-          padding-top: 30px;
-        }
-      }
-      .contenedorMob {
-        img {
-          height: 30rem;
+        .contenedorMob {
+          img {
+            height: 30rem;
+          }
         }
       }
     }
@@ -107,12 +108,14 @@
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
-      img {
-        max-height: 180px;
-      }
+
       .card1,
       .card2,
       .card3 {
+        img {
+          max-height: 180px;
+          padding-left: 70px;
+        }
         padding: 55px;
         .card-body {
           h3 {
@@ -125,9 +128,23 @@
       }
     }
 
-    .videoNp {
-      margin: 120px;
-      text-align: center;
+    .contenedor__video {
+      .textVideo {
+        color: $blanco;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-family: $titulos;
+        font-size: 1.5rem;
+        text-align: center;
+        padding-top: 65px;
+      }
+      .videoNp {
+        margin: 60px;
+        text-align: center;
+        iframe {
+          padding: 22px;
+        }
+      }
     }
 
     /*--------- PLANES  ---------*/
@@ -175,50 +192,46 @@
         font-size: 1.3rem;
         cursor: pointer;
       }
-    }
-    .gridPlanes {
-      width: 70rem;
-      display: -ms-grid;
-      display: grid;
-      -ms-grid-columns: (1fr) (3);
-      grid-template-columns: repeat(3, 1fr);
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      article {
+
+      .gridPlanes {
+        width: 70rem;
         display: -ms-grid;
         display: grid;
+        -ms-grid-columns: (1fr) (3);
+        grid-template-columns: repeat(3, 1fr);
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        background-color: $crema;
-        border-radius: 10px;
-        -webkit-box-shadow: 10px 10px 16px -5px rgba(0, 0, 0, 0.2);
-        box-shadow: 10px 10px 16px -5px rgba(0, 0, 0, 0.2);
-        height: 25rem;
-        width: 21rem;
-        &:hover {
-          -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.02, 1.02);
-          -webkit-transition: 0.3s;
-          transition: 0.3s;
+        article {
+          display: -ms-grid;
+          display: grid;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          background-color: $crema2;
+          border-radius: 10px;
+          -webkit-box-shadow: 10px 10px 16px -5px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 10px 16px -5px rgba(0, 0, 0, 0.2);
+          height: 25rem;
+          width: 21rem;
+          &:hover {
+            -webkit-transform: scale(1.05, 1.05);
+            transform: scale(1.02, 1.02);
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+          }
+          .textosPlanes {
+            @include textosplanes;
+            .fa-arrow-circle-right {
+              color: $violeta;
+              font-size: 15px;
+            }
+          }
         }
       }
-    }
-
-    .textosPlanes {
-      @include textosplanes;
-      .fa-arrow-circle-right {
-        color: $violeta;
-        font-size: 15px;
-      }
-    }
-
-    .fa-arrow-circle-right {
-      font-size: 15px;
     }
 
     /*--------- DESCARGA  ---------*/
@@ -232,7 +245,7 @@
         to($crema)
       );
       background-image: linear-gradient($blanco, $crema);
-      height: 550px;
+      height: 25rem;
 
       .textDesc {
         p {
@@ -245,7 +258,7 @@
         }
       }
       .dispositivosDesc {
-        padding-top: 100px;
+        padding-top: 50px;
         display: -ms-grid;
         display: grid;
         -ms-grid-columns: (1fr) (4);
@@ -257,7 +270,7 @@
         p {
           text-align: center;
           color: $grisoscuro;
-          font-size: 30px;
+          font-size: 1.4rem;
         }
         img {
           &:hover {
@@ -268,15 +281,9 @@
           }
         }
 
-        .mobileDesc {
-          height: 200px;
-        }
-        .laptopDesc {
-          height: 200px;
-        }
-        .tvDesc {
-          height: 200px;
-        }
+        .mobileDesc,
+        .laptopDesc,
+        .tvDesc,
         .tabletDesc {
           height: 200px;
         }
@@ -285,6 +292,7 @@
 
     .contenedor__botones__descarga {
       height: 10rem;
+      padding-top: 2rem;
       background-color: $crema;
       .botones_descarga {
         display: flex;
@@ -298,7 +306,6 @@
         img {
           width: 230px;
           cursor: pointer;
-          
         }
       }
     }
@@ -306,11 +313,12 @@
     /*--------- BLOG ---------*/
 
     .tituloBlog {
+      background-color: $blanco;
       h1 {
-        color: $blanco;
+        color: $grisoscuro;
       }
       p {
-        color: $blanco;
+        color: $grisoscuro;
         text-transform: uppercase;
         text-align: center;
         letter-spacing: 5px;
@@ -319,9 +327,9 @@
     }
 
     .contenedor__blog {
-      background-color: linear-gradient($negro, $grisoscuro);
+      background-image: linear-gradient($blanco, $crema);
       width: 100%;
-      height: ($altovh)-30;
+      padding-top: 2rem;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -338,7 +346,8 @@
       .entrada1 {
         width: 100%;
         max-width: 45rem;
-        background-color: #e9e2d0;
+        background-color: $crema;
+        box-shadow: 10px 10px 16px -5px rgba(0, 0, 0, 0.3);
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -347,14 +356,14 @@
         align-items: center;
         border-radius: 10px;
         padding: 20px;
-        margin-bottom: 25px;
+        margin-bottom: 60px;
 
         .imgEntrada1 {
           img {
             min-width: 10rem;
             max-width: 10rem;
             -webkit-transform: translateX(-8rem);
-            transform: translateX(-8rem);
+            transform: translateX(-3rem);
             position: relative;
             border-radius: 10px;
             -webkit-box-shadow: 10px 10px 16px -5px rgba(0, 0, 0, 0.2);
@@ -364,15 +373,24 @@
 
         .textEntrada1 {
           position: absolute;
-          padding-left: 60px;
-          width: 38rem;
+          padding-left: 160px;
+          width: 40rem;
           h2 {
             color: $grisoscuro;
-            font-size: 40px;
+            font-size: 1.5rem;
           }
           p {
             color: $grisoscuro;
-            font-size: 18px;
+            font-size: 0.9rem;
+            padding-top: 1rem;
+          }
+          .linkMasInfo {
+            text-decoration: underline;
+            cursor: pointer;
+            color: $rosa;
+            &:hover {
+              color: $grisclaro;
+            }
           }
         }
       }
@@ -381,9 +399,9 @@
     /*--------- INICIAR SESIÓN  ---------*/
 
     .contenedor__form {
-      padding-top: 80px;
+      padding-top: 50px;
       background-color: $grisoscuro;
-      height: 40rem;
+      height: 35rem;
       display: -ms-grid;
       display: grid;
       -ms-grid-rows: (220px) (4);
@@ -403,13 +421,13 @@
         p {
           color: $blanco;
           text-align: center;
-          font-family: "raleway";
+          font-family: $textos;
           padding-top: 10px;
         }
         h4 {
           color: $blanco;
           text-align: center;
-          font-family: "raleway";
+          font-family: $textos;
           font-size: 35px;
         }
         img {
@@ -420,145 +438,56 @@
           font-size: 20px;
         }
       }
-    }
 
-    .form-control {
-      width: 300px;
-      height: 40px;
-      border: none;
-      border-radius: 5px;
-      padding: 10px;
-      margin: 15px;
-      font-family: "raleway";
-    }
-    .form-check {
-      padding: 10px;
-    }
-    .form-check-label {
-      color: $crema;
-      font-family: "raleway";
-    }
-    .userContrasena {
-      p {
-        padding-top: 15px;
-        display: inline-block;
-        color: $rosa;
-        cursor: pointer;
-        border-bottom: solid 1px $rosa;
-      }
-    }
-
-    @media only screen and (min-width: 401px) and (max-width: 960px) {
-      .menuNav {
-        height: 18em;
-        width: 100%;
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
+      .formularioNp {
+        display: flex;
         flex-direction: column;
-        -ms-flex-line-pack: center;
-        align-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
+        justify-content: center;
         align-items: center;
-        li {
-          display: block;
-          text-align: center;
-          padding-bottom: 10px;
-          a {
-            padding: 0px;
-            font-size: 20px;
+
+        .form-control {
+          width: 300px;
+          height: 2rem;
+          border: none;
+          border-radius: 5px;
+          padding: 15px;
+          margin: 15px;
+          font-family: $textos;
+        }
+        .form-check {
+          padding: 10px;
+          .form-check-label {
+            color: $crema;
+            font-family: $textos;
+          }
+        }
+
+        .userContrasena {
+          p {
+            display: inline-block;
+            color: $rosa;
+            cursor: pointer;
+            border-bottom: solid 1px $rosa;
+            padding-top: 15px;
+            text-align: center;
           }
         }
       }
     }
+
+    /* RESPONSIVE */
+
+    /* moviles pequeños */
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-      .menuNav {
-        height: 18em;
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -ms-flex-line-pack: center;
-        align-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        li {
-          display: block;
-          text-align: center;
-          padding-bottom: 10px;
-          a {
-            padding: 0px;
-          }
-        }
-      }
-      .contenedorTextMob {
-        width: 300px;
-        width: 100%;
-      }
-      .contenedorText {
-        display: block;
-        max-width: 350px;
-        text-align: center;
-        h1 {
-          font-size: 60px;
-          text-align: center;
-        }
-      }
-      .contenedorMob {
-        img {
-          height: 300px;
-        }
-      }
-      .videoNp {
-        width: 100%;
-        margin: 10px;
-        text-align: center;
-      }
     }
+    /* moviles grandes */
     @media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
-      .menuNav {
-        height: 18em;
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -ms-flex-line-pack: center;
-        align-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        li {
-          display: block;
-          text-align: center;
-          padding-bottom: 10px;
-          a {
-            padding: 0px;
-          }
-        }
-      }
     }
+    /* ipads y tablets */
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-      .menuNav {
-        li {
-          a {
-            text-decoration: none;
-            color: $blanco;
-            font-size: 15px;
-            padding-right: 30px;
-          }
-        }
-      }
-      .logoNav {
-        max-height: 40px;
-      }
+    }
+    /* pequeños monitores */
+    @media only screen and (min-device-width: 1024px) and (max-device-width: 1670px) {
     }
   }
 }
