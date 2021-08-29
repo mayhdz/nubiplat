@@ -1,40 +1,43 @@
 /*--------- MENU ---------*/
 body {
-  .logoNavbar {
-    max-height: 50px;
-  }
-  .items__navbar {
-    background-color: $negro;
-    width: $anchocompleto;
-    height: 6em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 25px;
-    ul {
-      list-style: none;
+  .contenedor__navbar {
+    width: 100%;
+    .logoNavbar {
+      max-height: 50px;
     }
-    li {
-      display: inline-block;
-      a {
-        font-family: "poppins";
-        font-weight: 300;
-        text-decoration: none;
-        color: $blanco;
-        font-size: 18px;
-        letter-spacing: 1.2px;
-        padding: 15px;
-        &:hover {
-          color: $rosa;
-          background-color: $negro;
+    .items__navbar {
+      background-color: $negro;
+      width: $anchocompleto;
+      height: 6em;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 25px;
+      ul {
+        list-style: none;
+      }
+      li {
+        display: inline-block;
+        a {
+          font-family: "poppins";
+          font-weight: 300;
+          text-decoration: none;
+          color: $blanco;
+          font-size: 18px;
+          letter-spacing: 1.2px;
+          padding: 15px;
+          &:hover {
+            color: $rosa;
+            background-color: $negro;
+          }
         }
       }
     }
@@ -127,7 +130,7 @@ body {
     /* MENU */
 
     .contenedor__navbar {
-      width: 560px;
+      width: 100%;
       .items__navbar {
         display: flex;
         flex-direction: row;
@@ -184,7 +187,7 @@ body {
   @media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
     /* MENU */
     .contenedor__navbar {
-      width: 760px;
+      width: 100%;
       .items__navbar {
         display: flex;
         flex-direction: row;
@@ -203,7 +206,7 @@ body {
     /* FOOTER */
 
     footer {
-      max-width: 100%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;

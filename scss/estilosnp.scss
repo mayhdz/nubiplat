@@ -8,9 +8,9 @@
   box-sizing: border-box;
   font-family: "Rubik", "Poppins";
   body {
+    width: 100%;
+    height: 100vh;
     background-color: $grisoscuro;
-    max-width: $anchocompleto;
-    max-height: 80vh;
     h1 {
       text-align: center;
       font-family: $titulos;
@@ -21,7 +21,9 @@
 
     /*--------- INICIO  ---------*/
 
-    .banner {
+    .contenedor__banner {
+      width: $anchocompleto;
+      height: 90vh;
       background: -webkit-gradient(
         linear,
         left top,
@@ -65,11 +67,9 @@
         align-items: center;
         .contenedorText {
           display: inline-block;
-          max-width: 620px;
-          padding-left: 80px;
+          width: 38rem;
           h1 {
             color: $blanco;
-            margin: auto;
             font-size: 70px;
             text-align: left;
             padding: 0px;
@@ -84,7 +84,7 @@
         }
         .contenedorMob {
           img {
-            height: 30rem;
+            height: 25rem;
           }
         }
       }
@@ -93,7 +93,6 @@
     .contenedor__beneficios {
       background-color: $negro;
       padding-bottom: 30px;
-      width: 100%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -112,7 +111,7 @@
       .card2,
       .card3 {
         img {
-          max-height: 180px;
+          height: 180px;
           padding-left: 70px;
         }
         padding: 55px;
@@ -128,6 +127,7 @@
     }
 
     .contenedor__video {
+      width: 100%;
       .textVideo {
         color: $blanco;
         text-transform: uppercase;
@@ -164,6 +164,7 @@
       }
     }
     .contenedor__planes {
+      width: 100%;
       height: 540px;
       background-image: -webkit-gradient(
         linear,
@@ -193,33 +194,25 @@
       }
 
       .gridPlanes {
-        width: 70rem;
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: (1fr) (3);
-        grid-template-columns: repeat(3, 1fr);
-        -webkit-box-align: center;
-        -ms-flex-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: center;
         article {
-          display: -ms-grid;
-          display: grid;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
+          margin-left: 25px;
+          display: flex;
+          flex-wrap: wrap;
           align-items: center;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
           justify-content: center;
           background-color: $crema2;
           border-radius: 10px;
-          -webkit-box-shadow: 10px 10px 16px -5px rgba(0, 0, 0, 0.2);
           box-shadow: 10px 10px 16px -5px rgba(0, 0, 0, 0.2);
           height: 25rem;
           width: 21rem;
           &:hover {
-            -webkit-transform: scale(1.05, 1.05);
             transform: scale(1.02, 1.02);
-            -webkit-transition: 0.3s;
             transition: 0.3s;
           }
           .textosPlanes {
@@ -236,6 +229,7 @@
     /*--------- DESCARGA  ---------*/
 
     .contenedor__descarga {
+      width: 100%;
       background-image: -webkit-gradient(
         linear,
         left top,
@@ -476,15 +470,15 @@
 
     /* ---------- RESPONSIVE ---------- */
 
-    /* moviles pequeños */
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+      /* INICIO */
       .banner {
-        width: 560px;
-        height:45rem;
+        background-color: aqua;
+        width: 100%;
+        max-width: auto;
         .contenedorTextMob {
           padding-top: 80px;
           .contenedorText {
-            width:450px;
             padding-left: 35px;
             h1 {
               font-size: 3.5rem;
@@ -503,20 +497,41 @@
         }
       }
 
-      .contenedor__beneficios {
-        width: 120%;
+      /* PLANES */
+
+      .tituloPlanes {
+        width: 500px;
+        h1 {
+          font-size: 1.8rem;
+          text-align: center;
+        }
+        p {
+          width: 300px;
+          font-size: 0.2rem;
+        }
       }
-    
-    
-    
-    
+
+      .contenedor__planes {
+        height: 80rem;
+        width: 500px;
+        .gridPlanes {
+          width: 50%;
+          article {
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+          }
+        }
+      }
     }
     /* moviles grandes */
     @media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
+      /* INICIO */
+
       .banner {
         width: 150%;
-        height:50rem;
-        padding:45px;
+        height: 50rem;
+        padding: 45px;
         .contenedorTextMob {
           width: 780px;
           .contenedorText {
@@ -537,18 +552,17 @@
         }
       }
       .contenedor__beneficios {
-        width:130%;
+        width: 130%;
       }
-
-
-
-      
     }
+
+    /* PLANES */
+
     /* ipads y tablets */
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       .banner {
-        height:30rem;
-        padding:0px;
+        height: 30rem;
+        padding: 0px;
         .contenedorTextMob {
           display: flex;
           flex-direction: row;
@@ -567,18 +581,16 @@
           .contenedorMob {
             img {
               height: 20rem;
-              float:right;
+              float: right;
             }
           }
         }
       }
-
-      
     }
     /* pequeños monitores */
     @media only screen and (min-device-width: 1024px) and (max-device-width: 1670px) {
       .banner {
-        height:35rem;
+        height: 35rem;
         .contenedorTextMob {
           display: flex;
           flex-direction: row;
@@ -596,17 +608,11 @@
           .contenedorMob {
             img {
               height: 26rem;
-              float:right;
+              float: right;
             }
           }
         }
       }
-    
-    
-    
-    
-    
-    
     }
   }
 }
